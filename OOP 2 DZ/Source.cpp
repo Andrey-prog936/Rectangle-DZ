@@ -5,7 +5,7 @@ class Rectangle
 {
  private:
 	int height;
-	int	weight;
+	int weight;
 	char simv;
 	struct Coord
 	{
