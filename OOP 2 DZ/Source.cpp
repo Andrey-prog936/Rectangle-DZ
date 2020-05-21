@@ -17,7 +17,7 @@ class Rectangle
  public:
 	Rectangle() // default constructor
 	{
-		cout << "Constructor (default)" << endl;
+		// cout << "Constructor (default)" << endl;
 		height = 0;
 		weight = 0;
 		simv = '@';
@@ -25,15 +25,16 @@ class Rectangle
 		cords.Y = 0;
 		size = 0;
 	}
-	Rectangle(int _size) : Rectangle() // parametrized constructor
+	Rectangle(int _size,char _simv) // parametrized constructor
 	{
-		cout << "Constructor (parametrized) 1" << endl;
+		// cout << "Constructor (parametrized) 1" << endl;
 		height = _size;
 		weight = _size;
+		simv = _simv;
 	}
 	Rectangle(int _height, int _weight, char _simv) : Rectangle() // parametrized constructor
 	{
-		cout << "Constructor (parametrized) 2" << endl;
+		// cout << "Constructor (parametrized) 2" << endl;
 		height = _height;
 		weight = _weight;
 		simv = _simv;
@@ -86,6 +87,9 @@ int main() {
 	red.Print();	      // print rectangle
 	red.Moving(8, 4);    // moving rectangle
 	red.Print();	    // print rectangle
+	cout << "\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"<<endl;
+	Rectangle re(4,'%');
+	re.Print();
 	system("pause");   // command to delay console for earlier versions of Visual Studio
 	return 0;         // command to complete work with the program
 }
